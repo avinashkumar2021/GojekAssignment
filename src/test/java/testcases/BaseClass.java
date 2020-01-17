@@ -51,6 +51,7 @@ public class BaseClass {
 
 	@AfterMethod
 	public void tearDownTest(ITestResult result) throws Exception {
+		extent.endTest(logger);
 
 		if (result.getStatus() == ITestResult.SUCCESS) {
 			logger.log(LogStatus.PASS, "Passed test"+logger.addScreenCapture(Helper.captureScreenshot(driver)));
