@@ -68,7 +68,7 @@ public class BaseClass {
 	public void tearDown() {
 		//BrowserFactory.closeApplication(driver);
 		//driver.get(path);
-		driver.close();
+		
 	}
 
 	
