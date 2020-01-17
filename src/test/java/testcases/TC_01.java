@@ -9,6 +9,7 @@ import pages.Homepage;
 import pages.OrderSummaryCart;
 import pages.ShoppingCart;
 import utility.ExcelUtils;
+import utility.ExtentManager;
 
 public class TC_01 extends BaseClass{
 	
@@ -18,11 +19,7 @@ public class TC_01 extends BaseClass{
 	
 	@Test(dataProvider = "TestData")
 	public void validateSuccessfullTransaction(String Name,String Email,String PhoneNo,String City,String PostalCode,String CardNumber,String ExpiryDate,String cvv,String Otp) throws Exception {
-		logger=extent.startTest(ExcelUtils.getTestCaseName(this.toString()));
-		
-		
-		
-		
+		logger=extent.startTest(ExtentManager.startReporting());
 		Homepage.using(driver)
 		        .ClickBuyNow();
 		
@@ -53,7 +50,7 @@ public class TC_01 extends BaseClass{
 		   Assert.assertEquals(Message, "Transaction successful");
 		
 		
-		System.out.println(Message);
+	extent.endTest(logger);
 		               
 		
 		
