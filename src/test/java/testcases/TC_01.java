@@ -50,7 +50,8 @@ public class TC_01 extends BaseClass{
 		   Assert.assertEquals(Message, "Transaction successful");
 		
 		
-	extent.endTest(logger);
+		   extent.endTest(logger);
+		   extent.flush();
 		               
 		
 		
