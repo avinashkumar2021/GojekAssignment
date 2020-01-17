@@ -54,7 +54,7 @@ public class TC_01 extends BaseClass{
 		
 		
 		System.out.println(Message);
-		 extent.endTest(logger);               
+		               
 		
 		
 	}
