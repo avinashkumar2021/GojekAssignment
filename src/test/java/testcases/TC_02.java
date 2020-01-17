@@ -19,7 +19,6 @@ public class TC_02 extends BaseClass{
 	
 	@Test(dataProvider = "TestData")
 	public void validateFailedTransaction(String Name,String Email,String PhoneNo,String City,String PostalCode,String CardNumber,String ExpiryDate,String cvv,String Otp) throws Exception {
-		logger=extent.startTest(ExtentManager.startReporting());
 		
 		
 		
