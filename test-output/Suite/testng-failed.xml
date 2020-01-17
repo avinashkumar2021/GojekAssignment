@@ -8,20 +8,12 @@
     <parameter name="url" value="https://demo.midtrans.com/"/>
     <classes>
       <class name="testcases.TC_01"/>
-      <class name="testcases.TC_02"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test(failed)">
     <parameter name="browser" value="Chrome"/>
     <parameter name="url" value="https://demo.midtrans.com/"/>
     <classes>
-      <class name="testcases.TC_02">
-        <methods>
-          <include name="tearDownTest"/>
-          <include name="setup"/>
-          <include name="validateFailedTransaction" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- testcases.TC_02 -->
       <class name="testcases.TC_01">
         <methods>
           <include name="tearDownTest"/>
@@ -29,6 +21,7 @@
           <include name="setupTestSuite"/>
           <include name="tearDown"/>
           <include name="validateSuccessfullTransaction" invocation-numbers="0"/>
+          <include name="closed"/>
         </methods>
       </class> <!-- testcases.TC_01 -->
     </classes>
