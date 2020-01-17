@@ -51,7 +51,7 @@ public class TC_02 extends BaseClass{
 		                
 		   Assert.assertEquals(Message, "Your card got declined by the bank");
 		
-		   extent.endTest(logger);
+		   
 		  
 		                
 		
